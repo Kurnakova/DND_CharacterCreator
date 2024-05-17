@@ -34,10 +34,9 @@ Ancestry GetAncestry()
     for (bool InvalidOption = true; InvalidOption;  )
     {
        ancestryOption = Convert.ToInt32(Console.ReadLine());
-       InvalidOption = ancestryOption < 1 || ancestryOption > ancestryList.Length;
+       InvalidOption = ancestryOption < 1 || ancestryOption > 3;
        if (InvalidOption)
             Console.WriteLine("Неверное число. Введите число из списка.");
     }
-    ancestryOption--;
-    return ancestryList[ancestryOption];
-} 
+    return new Ancestry(ancestryOption);
+}
