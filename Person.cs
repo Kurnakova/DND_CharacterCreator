@@ -1,57 +1,56 @@
 class Person
 {
     string? _name;
-    int _strength;
-    int _dexterity;
-    int _constitution;
-    int _intelligence;
-    int _wisdom;
-    int _charisma;
-    int _strengthModifier;
-    int _dexterityModifier;
-    int _constitutionModifier;
-    int _intelligenceModifier;
-    int _wisdomModifier;
-    int _charismaModifier;
+    Characteristic _strength = new Characteristic(0);
+    Characteristic _dexterity = new Characteristic(0);
+    Characteristic _constitution = new Characteristic(0);
+    Characteristic _intelligence = new Characteristic(0);
+    Characteristic _wisdom = new Characteristic(0);
+    Characteristic _charisma = new Characteristic(0);
 
     Ancestry _ancestry;
     //Методы
     public void GetInfo()
     {
         Console.WriteLine($"Имя: {_name}, Происхождение: {_ancestry._name}");
-        Console.WriteLine($"Сила: {_strength} ({GetModifierString(_strength)}), Ловкость:{_dexterity} ({GetModifierString(_dexterity)}), Телосложение: {_constitution} ({GetModifierString(_constitution)}), Интеллект: {_intelligence} ({GetModifierString(_intelligence)}), Мудрость: {_wisdom} ({GetModifierString(_wisdom)}), Харизма: {_charisma} ({GetModifierString(_charisma)})");
+        Console.WriteLine($"Сила: {_strength.value} ({_strength.GetModifierString()}), Ловкость:{_dexterity.value} ({_dexterity.GetModifierString()}), Телосложение: {_constitution.value} ({_constitution.GetModifierString()}), Интеллект: {_intelligence.value} ({_intelligence.GetModifierString()}), Мудрость: {_wisdom.value} ({_wisdom.GetModifierString()}), Харизма: {_charisma.value} ({_charisma.GetModifierString()})");
     }
-    int GetModifierInt(int characteristic)
+    int SetCharacteristic(int number, int ancestryBonus)
     {
-        decimal modifierDecimal = (Math.Floor((decimal)(characteristic - 10)/2));
-        int modifier = Convert.ToInt32(modifierDecimal);
-        return modifier;
+        int characteristic = number + ancestryBonus;
+        return characteristic;
     }
-    string GetModifierString(int characteristic)
+    private class Characteristic
     {
-        int modifier = GetModifierInt(characteristic);
-        if (modifier > 0)
-            return $"+{modifier}";
-        else
-            return $"{modifier}";
+        public int value { get; set; } = 0;
+        public int GetModifierInt()
+        {
+            decimal modifierDecimal = (Math.Floor((decimal)(value - 10)/2));
+            int modifier = Convert.ToInt32(modifierDecimal);
+            return modifier;
+        }
+        public string GetModifierString()
+        {
+            int modifier = GetModifierInt();
+            if (modifier > 0)
+                return $"+{modifier}";
+            else
+                return $"{modifier}";
+        }
+        public Characteristic (int value)
+        {
+            this.value = value;
+        }
     }
-
-    void SetCharacteristic(ref int characteristic, int number, ref int modifier, int ancestryBonus)
-    {
-        characteristic = number;
-        characteristic += ancestryBonus;
-        modifier = GetModifierInt(characteristic);
-    }
-
     public Person (string name, Ancestry ancestry, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
     {
         _name = name;
         _ancestry = ancestry;
-        SetCharacteristic(ref _strength, strength, ref _strengthModifier, ancestry._strBonus);
-        SetCharacteristic(ref _dexterity, dexterity, ref _dexterityModifier, ancestry._dexBonus);
-        SetCharacteristic(ref _constitution, constitution, ref _constitutionModifier, ancestry._conBonus);
-        SetCharacteristic(ref _intelligence, intelligence, ref _intelligenceModifier, ancestry._intBonus);
-        SetCharacteristic(ref _wisdom, wisdom, ref _wisdomModifier, ancestry._wisBonus);
-        SetCharacteristic(ref _charisma, charisma, ref _charismaModifier, ancestry._chaBonus);
+        _strength = new Characteristic (SetCharacteristic(strength, ancestry._strengthBonus));
+        _dexterity = new Characteristic (SetCharacteristic(dexterity, ancestry._dexterityBonus));
+        _constitution = new Characteristic (SetCharacteristic(constitution, ancestry._constitutionBonus));
+        _intelligence = new Characteristic (SetCharacteristic(intelligence, ancestry._intelligenceBonus));
+        _wisdom = new Characteristic (SetCharacteristic(wisdom, ancestry._wisdomBonus));
+        _charisma = new Characteristic (SetCharacteristic(charisma, ancestry._charismaBonus));
     }
 }
