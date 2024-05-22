@@ -31,13 +31,13 @@ class Ancestry
             _dexBonus = 2;
             _wisBonus = 1;
         }
-        else-if (type == 2)
+        else if (type == 2)
         {
             _name = "Дварф";
             _strBonus = 1;
             _conBonus = 2;
         }
-        else-if (type == 3)
+        else if (type == 3)
         {
             _name = "Гном";
             _dexBonus = 1;
