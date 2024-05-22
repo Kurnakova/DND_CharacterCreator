@@ -8,16 +8,6 @@ class Ancestry
     public int _wisdomBonus { get; } = 0;
     public int _charismaBonus { get; } = 0;
 
-    public Ancestry( string name, int strBonus = 0, int dexBonus = 0, int conBonus = 0, int intBonus = 0, int wisBonus = 0, int chaBonus = 0 )
-    {
-        _name = name;
-        _strengthBonus = strBonus;
-        _dexterityBonus = dexBonus;
-        _constitutionBonus = conBonus;
-        _intelligenceBonus = intBonus;
-        _wisdomBonus = wisBonus;
-        _charismaBonus = chaBonus;
-    }
     public Ancestry (int type)
     {
         if (type == 1)
