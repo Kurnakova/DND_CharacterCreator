@@ -1,7 +1,5 @@
 class Ancestry
 {
-    static int lastID = 0;
-    public int _ID { get; } = 0;
     public string _name { get; } = "undefined ancestry";
     public int _strengthBonus { get; } = 0;
     public int _dexterityBonus { get; } = 0;
@@ -12,9 +10,6 @@ class Ancestry
 
     public Ancestry( string name, int strBonus = 0, int dexBonus = 0, int conBonus = 0, int intBonus = 0, int wisBonus = 0, int chaBonus = 0 )
     {
-        
-        lastID++;
-        _ID = lastID;
         _name = name;
         _strengthBonus = strBonus;
         _dexterityBonus = dexBonus;
