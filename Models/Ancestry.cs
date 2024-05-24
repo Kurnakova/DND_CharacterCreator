@@ -1,35 +1,35 @@
 class Ancestry
 {
-    public string _name { get; } = "undefined ancestry";
-    public int _strengthBonus { get; }
-    public int _dexterityBonus { get; }
-    public int _constitutionBonus { get; }
-    public int _intelligenceBonus { get; }
-    public int _wisdomBonus { get; }
-    public int _charismaBonus { get; }
-    CreatureSize size;
+    public string? Name { get; }
+    public int StrengthBonus { get; }
+    public int DexterityBonus { get; }
+    public int ConstitutionBonus { get; }
+    public int IntelligenceBonus { get; }
+    public int WisdomBonus { get; }
+    public int CharismaBonus { get; }
+    CreatureSize size { get; }
 
     public Ancestry (int type)
     {
         if (type == 1)
         {
-            _name = "Эльф";
-            _dexterityBonus = 2;
-            _wisdomBonus = 1;
+            Name = "Эльф";
+            DexterityBonus = 2;
+            WisdomBonus = 1;
             size = CreatureSize.Medium;
         }
         else if (type == 2)
         {
-            _name = "Дварф";
-            _strengthBonus = 1;
-            _constitutionBonus = 2;
+            Name = "Дварф";
+            StrengthBonus = 1;
+            ConstitutionBonus = 2;
             size = CreatureSize.Medium;
         }
         else if (type == 3)
         {
-            _name = "Гном";
-            _dexterityBonus = 1;
-            _intelligenceBonus = 2;
+            Name = "Гном";
+            DexterityBonus = 1;
+            IntelligenceBonus = 2;
             size = CreatureSize.Small;
         }
     }
