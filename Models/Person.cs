@@ -12,7 +12,7 @@ class Person
     //Методы
     public void GetInfo()
     {
-        Console.WriteLine($"Имя: {_name}, Происхождение: {_ancestry._name}");
+        Console.WriteLine($"Имя: {_name}, Происхождение: {_ancestry.Name}");
         Console.WriteLine($"Сила: {_strength.value} ({_strength.GetModifierString()}), Ловкость:{_dexterity.value} ({_dexterity.GetModifierString()}), Телосложение: {_constitution.value} ({_constitution.GetModifierString()}), Интеллект: {_intelligence.value} ({_intelligence.GetModifierString()}), Мудрость: {_wisdom.value} ({_wisdom.GetModifierString()}), Харизма: {_charisma.value} ({_charisma.GetModifierString()})");
     }
     int SetCharacteristic(int number, int ancestryBonus)
@@ -46,11 +46,11 @@ class Person
     {
         _name = name;
         _ancestry = ancestry;
-        _strength = new Characteristic (SetCharacteristic(strength, ancestry._strengthBonus));
-        _dexterity = new Characteristic (SetCharacteristic(dexterity, ancestry._dexterityBonus));
-        _constitution = new Characteristic (SetCharacteristic(constitution, ancestry._constitutionBonus));
-        _intelligence = new Characteristic (SetCharacteristic(intelligence, ancestry._intelligenceBonus));
-        _wisdom = new Characteristic (SetCharacteristic(wisdom, ancestry._wisdomBonus));
-        _charisma = new Characteristic (SetCharacteristic(charisma, ancestry._charismaBonus));
+        _strength = new Characteristic (SetCharacteristic(strength, ancestry.StrengthBonus));
+        _dexterity = new Characteristic (SetCharacteristic(dexterity, ancestry.DexterityBonus));
+        _constitution = new Characteristic (SetCharacteristic(constitution, ancestry.ConstitutionBonus));
+        _intelligence = new Characteristic (SetCharacteristic(intelligence, ancestry.IntelligenceBonus));
+        _wisdom = new Characteristic (SetCharacteristic(wisdom, ancestry.WisdomBonus));
+        _charisma = new Characteristic (SetCharacteristic(charisma, ancestry.CharismaBonus));
     }
 }
