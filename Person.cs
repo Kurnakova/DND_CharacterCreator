@@ -44,7 +44,7 @@ class Person
     }
     public Person (string name, Ancestry ancestry, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
     {
-        _name = name;
+        _name = name ?? "без имени";
         _ancestry = ancestry;
         _strength = new Characteristic (SetCharacteristic(strength, ancestry._strengthBonus));
         _dexterity = new Characteristic (SetCharacteristic(dexterity, ancestry._dexterityBonus));
