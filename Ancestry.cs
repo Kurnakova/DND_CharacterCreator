@@ -1,12 +1,12 @@
 class Ancestry
 {
     public string _name { get; } = "undefined ancestry";
-    public int _strengthBonus { get; } = 0;
-    public int _dexterityBonus { get; } = 0;
-    public int _constitutionBonus { get; } = 0;
-    public int _intelligenceBonus { get; } = 0;
-    public int _wisdomBonus { get; } = 0;
-    public int _charismaBonus { get; } = 0;
+    public int _strengthBonus { get; }
+    public int _dexterityBonus { get; }
+    public int _constitutionBonus { get; }
+    public int _intelligenceBonus { get; }
+    public int _wisdomBonus { get; }
+    public int _charismaBonus { get; }
     CreatureSize size;
 
     public Ancestry (int type)
