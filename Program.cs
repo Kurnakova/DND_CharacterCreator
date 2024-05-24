@@ -1,7 +1,7 @@
 Console.Write("Введите имя персонажа: ");
 string? name = Console.ReadLine();
 if (name == "" || name == " ")
-    name = null;
+    name = "без имени";
 Console.Write("Введите значение силы: ");
 int strength = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение ловкости: ");
