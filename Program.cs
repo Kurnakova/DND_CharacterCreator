@@ -1,10 +1,3 @@
-﻿using static Person;
-
-Ancestry elf = new Ancestry( "Эльф" , dexBonus: 2, wisBonus: 1 );
-Ancestry dwarf = new Ancestry( "Дварф" , conBonus: 2, strBonus: 1 );
-Ancestry gnome = new Ancestry( "Гном" , intBonus: 2, dexBonus: 1 );
-Ancestry [] ancestryList = {elf, dwarf, gnome};
-
 Console.Write("Введите имя персонажа: ");
 string? name = Console.ReadLine();
 Console.Write("Введите значение силы: ");
