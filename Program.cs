@@ -1,4 +1,3 @@
-// test for commit
 Console.Write("Введите имя персонажа: ");
 string? name = Console.ReadLine();
 if (name == "" || name == " ")
