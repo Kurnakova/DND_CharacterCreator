@@ -25,13 +25,16 @@ person.GetInfo();
 
 Ancestry GetAncestry()
 {
-    int ancestryOption = 0;
+
+    AncestryType type = AncestryType.dwarf;
     for (bool InvalidOption = true; InvalidOption;  )
     {
-       ancestryOption = Convert.ToInt32(Console.ReadLine());
+
+       int ancestryOption = Convert.ToInt32(Console.ReadLine());
+       type = (AncestryType)ancestryOption;
        InvalidOption = ancestryOption < 1 || ancestryOption > 3;
        if (InvalidOption)
             Console.WriteLine("Неверное число. Введите число из списка.");
     }
-    return new Ancestry(ancestryOption);
+    return new Ancestry(type);
 }

@@ -9,23 +9,23 @@ class Ancestry
     public int CharismaBonus { get; }
     CreatureSize size { get; }
 
-    public Ancestry (int type)
+    public Ancestry (AncestryType type)
     {
-        if (type == 1)
+        if (type == AncestryType.elf)
         {
             Name = "Эльф";
             DexterityBonus = 2;
             WisdomBonus = 1;
             size = CreatureSize.Medium;
         }
-        else if (type == 2)
+        else if (type == AncestryType.dwarf)
         {
             Name = "Дварф";
             StrengthBonus = 1;
             ConstitutionBonus = 2;
             size = CreatureSize.Medium;
         }
-        else if (type == 3)
+        else if (type == AncestryType.gnome)
         {
             Name = "Гном";
             DexterityBonus = 1;
