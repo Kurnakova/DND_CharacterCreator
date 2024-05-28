@@ -1,12 +1,12 @@
 class Person
 {
     string? _name;
-    Characteristic _strength = new Characteristic(0);
-    Characteristic _dexterity = new Characteristic(0);
-    Characteristic _constitution = new Characteristic(0);
-    Characteristic _intelligence = new Characteristic(0);
-    Characteristic _wisdom = new Characteristic(0);
-    Characteristic _charisma = new Characteristic(0);
+    private readonly Characteristic _strength = new Characteristic(0);
+    private readonly Characteristic _dexterity = new Characteristic(0);
+    private readonly Characteristic _constitution = new Characteristic(0);
+    private readonly Characteristic _intelligence = new Characteristic(0);
+    private readonly Characteristic _wisdom = new Characteristic(0);
+    private readonly Characteristic _charisma = new Characteristic(0);
 
     Ancestry _ancestry;
     //Методы
@@ -21,7 +21,7 @@ class Person
         _name = name;
         _ancestry = ancestry;
         _strength = new Characteristic (strength + ancestry.StrengthBonus);
-        _dexterity = new Characteristic ((dexterity + ancestry.DexterityBonus));
+        _dexterity = new Characteristic (dexterity + ancestry.DexterityBonus);
         _constitution = new Characteristic (constitution + ancestry.ConstitutionBonus);
         _intelligence = new Characteristic (intelligence + ancestry.IntelligenceBonus);
         _wisdom = new Characteristic (wisdom + ancestry.WisdomBonus);

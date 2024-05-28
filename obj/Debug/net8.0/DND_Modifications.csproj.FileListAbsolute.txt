@@ -26,3 +26,18 @@ E:\MyPrograms\dotnet\DND_Modifications\bin\Debug\net8.0\DND_Modifications.dll
 E:\MyPrograms\dotnet\DND_Modifications\bin\Debug\net8.0\DND_Modifications.pdb
 E:\MyPrograms\dotnet\DND_Modifications\obj\Debug\net8.0\DND_Modifications.genruntimeconfig.cache
 E:\MyPrograms\dotnet\DND_Modifications\obj\Debug\net8.0\ref\DND_Modifications.dll
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\bin\Debug\net8.0\DND_Modifications.exe
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\bin\Debug\net8.0\DND_Modifications.deps.json
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\bin\Debug\net8.0\DND_Modifications.runtimeconfig.json
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\bin\Debug\net8.0\DND_Modifications.dll
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\bin\Debug\net8.0\DND_Modifications.pdb
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\DND_Modifications.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\DND_Modifications.AssemblyInfoInputs.cache
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\DND_Modifications.AssemblyInfo.cs
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\DND_Modifications.csproj.CoreCompileInputs.cache
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\DND_Modifications.sourcelink.json
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\DND_Modifications.dll
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\refint\DND_Modifications.dll
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\DND_Modifications.pdb
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\DND_Modifications.genruntimeconfig.cache
+C:\Users\User779\dotnet\DND_Modifications new\DND_Modifications\obj\Debug\net8.0\ref\DND_Modifications.dll

@@ -1,6 +1,6 @@
 class Characteristic
 {
-    public int value { get; set; } = 0;
+    public int value { get; set; }
     public int GetModifierInt()
     {
         decimal modifierDecimal = (Math.Floor((decimal)(value - 10)/2));
