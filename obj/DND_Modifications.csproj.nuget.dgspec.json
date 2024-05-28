@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MyPrograms\\dotnet\\DND_Modifications\\DND_Modifications.csproj": {}
+    "C:\\Users\\User779\\dotnet\\DND_Modifications new\\DND_Modifications\\DND_Modifications.csproj": {}
   },
   "projects": {
-    "E:\\MyPrograms\\dotnet\\DND_Modifications\\DND_Modifications.csproj": {
+    "C:\\Users\\User779\\dotnet\\DND_Modifications new\\DND_Modifications\\DND_Modifications.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MyPrograms\\dotnet\\DND_Modifications\\DND_Modifications.csproj",
+        "projectUniqueName": "C:\\Users\\User779\\dotnet\\DND_Modifications new\\DND_Modifications\\DND_Modifications.csproj",
         "projectName": "DND_Modifications",
-        "projectPath": "E:\\MyPrograms\\dotnet\\DND_Modifications\\DND_Modifications.csproj",
-        "packagesPath": "C:\\Users\\COMP\\.nuget\\packages\\",
-        "outputPath": "E:\\MyPrograms\\dotnet\\DND_Modifications\\obj\\",
+        "projectPath": "C:\\Users\\User779\\dotnet\\DND_Modifications new\\DND_Modifications\\DND_Modifications.csproj",
+        "packagesPath": "C:\\Users\\User779\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User779\\dotnet\\DND_Modifications new\\DND_Modifications\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\COMP\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User779\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
