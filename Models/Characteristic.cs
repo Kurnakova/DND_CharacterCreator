@@ -1,9 +1,9 @@
 class Characteristic
 {
-    public int value { get; set; }
+    public int Value { get; set; }
     public int GetModifierInt()
     {
-        decimal modifierDecimal = (Math.Floor((decimal)(value - 10)/2));
+        decimal modifierDecimal = Math.Floor((decimal)(Value - 10)/2);
         int modifier = Convert.ToInt32(modifierDecimal);
          return modifier;
     }
@@ -17,6 +17,6 @@ class Characteristic
     }
     public Characteristic (int value)
     {
-        this.value = value;
+        Value = value;
     }
 }

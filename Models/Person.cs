@@ -1,6 +1,6 @@
 class Person
 {
-    string? _name;
+    private readonly string? _name;
     private readonly Characteristic _strength = new Characteristic(0);
     private readonly Characteristic _dexterity = new Characteristic(0);
     private readonly Characteristic _constitution = new Characteristic(0);
@@ -13,7 +13,7 @@ class Person
     public void GetInfo()
     {
         Console.WriteLine($"Имя: {_name}, Происхождение: {_ancestry.Name}");
-        Console.WriteLine($"Сила: {_strength.value} ({_strength.GetModifierString()}), Ловкость:{_dexterity.value} ({_dexterity.GetModifierString()}), Телосложение: {_constitution.value} ({_constitution.GetModifierString()}), Интеллект: {_intelligence.value} ({_intelligence.GetModifierString()}), Мудрость: {_wisdom.value} ({_wisdom.GetModifierString()}), Харизма: {_charisma.value} ({_charisma.GetModifierString()})");
+        Console.WriteLine($"Сила: {_strength.Value} ({_strength.GetModifierString()}), Ловкость:{_dexterity.Value} ({_dexterity.GetModifierString()}), Телосложение: {_constitution.Value} ({_constitution.GetModifierString()}), Интеллект: {_intelligence.Value} ({_intelligence.GetModifierString()}), Мудрость: {_wisdom.Value} ({_wisdom.GetModifierString()}), Харизма: {_charisma.Value} ({_charisma.GetModifierString()})");
     }
     
     public Person (string name, Ancestry ancestry, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)

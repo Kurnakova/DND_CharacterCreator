@@ -20,7 +20,6 @@ Ancestry ancestry = GetAncestry();
 Person person = new Person (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
 person.GetInfo();
 
-
 // Методы
 
 Ancestry GetAncestry()
