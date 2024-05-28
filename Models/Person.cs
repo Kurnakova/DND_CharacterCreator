@@ -8,7 +8,7 @@ class Person
     private readonly Characteristic _wisdom = new Characteristic(0);
     private readonly Characteristic _charisma = new Characteristic(0);
 
-    Ancestry _ancestry;
+    private readonly Ancestry _ancestry;
     //Методы
     public void GetInfo()
     {
