@@ -18,7 +18,10 @@ class Person
     
     public Person (string name, Ancestry ancestry, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
     {
-        _name = name;
+        if (name == "" || name == " ")
+            _name = "без имени";
+        else
+            _name = name;
         _ancestry = ancestry;
         _strength = new Characteristic (strength + ancestry.StrengthBonus);
         _dexterity = new Characteristic (dexterity + ancestry.DexterityBonus);
