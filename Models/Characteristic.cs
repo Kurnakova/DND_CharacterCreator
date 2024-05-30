@@ -15,7 +15,7 @@ class Characteristic
         else
             return $"{modifier}";
     }
-    public Characteristic (int value)
+    public Characteristic(int value)
     {
         Value = value;
     }

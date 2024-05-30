@@ -9,7 +9,7 @@ class Ancestry
     public int CharismaBonus { get; }
     public CreatureSize Size { get; }
 
-    public Ancestry (AncestryType type)
+    public Ancestry(AncestryType type)
     {
         if (type == AncestryType.Elf)
         {
