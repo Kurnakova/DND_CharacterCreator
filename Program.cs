@@ -1,17 +1,18 @@
 Console.WriteLine("Введите в консоль данные о персонаже.");
 Console.Write("Имя: ");
 string? name = Console.ReadLine();
-Console.Write("Значение силы: ");
+Console.WriteLine("Введите значения характеристик.");
+Console.Write("Сила: ");
 int strength = Convert.ToInt32(Console.ReadLine());
-Console.Write("Значение ловкости: ");
+Console.Write("Ловкость: ");
 int dexterity = Convert.ToInt32(Console.ReadLine());
-Console.Write("Значение телосложения: ");
+Console.Write("Телосложение: ");
 int constitution = Convert.ToInt32(Console.ReadLine());
-Console.Write("Значение интеллекта: ");
+Console.Write("Интеллект: ");
 int intelligence = Convert.ToInt32(Console.ReadLine());
-Console.Write("Значение мудрости: ");
+Console.Write("Мудрость: ");
 int wisdom = Convert.ToInt32(Console.ReadLine());
-Console.Write("Значение харизмы: ");
+Console.Write("Харизма: ");
 int charisma = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Выберите расу (введите её номер в консоль): \n1. Эльф (+2 к ловкости, +1 к мудрости) \n2. Дварф (+2 к телосложению, +1 к силе) \n3. Гном (+2 к интеллекту, +1 к ловкости)");
 Ancestry ancestry = GetAncestry(); 
@@ -23,7 +24,6 @@ person.GetInfo();
 
 Ancestry GetAncestry()
 {
-
     AncestryType type = AncestryType.dwarf;
     for (bool InvalidOption = true; InvalidOption;  )
     {
