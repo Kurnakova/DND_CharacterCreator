@@ -9,12 +9,6 @@ class Person
     private readonly Characteristic _charisma = new Characteristic(0);
 
     private readonly Ancestry _ancestry;
-    //Методы
-    public void GetInfo()
-    {
-        Console.WriteLine($"Имя: {_name}, Происхождение: {_ancestry.Name}");
-        Console.WriteLine($"Сила: {_strength.Value} ({_strength.GetModifierString()}), Ловкость:{_dexterity.Value} ({_dexterity.GetModifierString()}), Телосложение: {_constitution.Value} ({_constitution.GetModifierString()}), Интеллект: {_intelligence.Value} ({_intelligence.GetModifierString()}), Мудрость: {_wisdom.Value} ({_wisdom.GetModifierString()}), Харизма: {_charisma.Value} ({_charisma.GetModifierString()})");
-    }
     
     public Person(
         string name, 
@@ -39,4 +33,11 @@ class Person
         _wisdom = new Characteristic (wisdom + ancestry.Wisdom);
         _charisma = new Characteristic (charisma + ancestry.Charisma);
     }
+    //Методы
+    public void GetInfo()
+    {
+        Console.WriteLine($"Имя: {_name}, Происхождение: {_ancestry.Name}");
+        Console.WriteLine($"Сила: {_strength.Value} ({_strength.GetModifierString()}), Ловкость:{_dexterity.Value} ({_dexterity.GetModifierString()}), Телосложение: {_constitution.Value} ({_constitution.GetModifierString()}), Интеллект: {_intelligence.Value} ({_intelligence.GetModifierString()}), Мудрость: {_wisdom.Value} ({_wisdom.GetModifierString()}), Харизма: {_charisma.Value} ({_charisma.GetModifierString()})");
+    }
+
 }
