@@ -32,11 +32,11 @@ class Person
         else
             _name = name;
         _ancestry = ancestry;
-        _strength = new Characteristic (strength + ancestry.StrengthBonus);
-        _dexterity = new Characteristic (dexterity + ancestry.DexterityBonus);
-        _constitution = new Characteristic (constitution + ancestry.ConstitutionBonus);
-        _intelligence = new Characteristic (intelligence + ancestry.IntelligenceBonus);
-        _wisdom = new Characteristic (wisdom + ancestry.WisdomBonus);
-        _charisma = new Characteristic (charisma + ancestry.CharismaBonus);
+        _strength = new Characteristic (strength + ancestry.Strength);
+        _dexterity = new Characteristic (dexterity + ancestry.Dexterity);
+        _constitution = new Characteristic (constitution + ancestry.Constitution);
+        _intelligence = new Characteristic (intelligence + ancestry.Intelligence);
+        _wisdom = new Characteristic (wisdom + ancestry.Wisdom);
+        _charisma = new Characteristic (charisma + ancestry.Charisma);
     }
 }

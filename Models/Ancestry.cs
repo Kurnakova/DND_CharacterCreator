@@ -1,12 +1,12 @@
 class Ancestry
 {
     public string? Name { get; }
-    public int StrengthBonus { get; }
-    public int DexterityBonus { get; }
-    public int ConstitutionBonus { get; }
-    public int IntelligenceBonus { get; }
-    public int WisdomBonus { get; }
-    public int CharismaBonus { get; }
+    public int Strength { get; }
+    public int Dexterity { get; }
+    public int Constitution { get; }
+    public int Intelligence { get; }
+    public int Wisdom { get; }
+    public int Charisma { get; }
     public CreatureSize Size { get; }
 
     public Ancestry(AncestryType type)
@@ -14,22 +14,22 @@ class Ancestry
         if (type == AncestryType.Elf)
         {
             Name = "Эльф";
-            DexterityBonus = 2;
-            WisdomBonus = 1;
+            Dexterity = 2;
+            Wisdom = 1;
             Size = CreatureSize.Medium;
         }
         else if (type == AncestryType.Dwarf)
         {
             Name = "Дварф";
-            StrengthBonus = 1;
-            ConstitutionBonus = 2;
+            Strength = 1;
+            Constitution = 2;
             Size = CreatureSize.Medium;
         }
         else if (type == AncestryType.Gnome)
         {
             Name = "Гном";
-            DexterityBonus = 1;
-            IntelligenceBonus = 2;
+            Dexterity = 1;
+            Intelligence = 2;
             Size = CreatureSize.Small;
         }
     }
