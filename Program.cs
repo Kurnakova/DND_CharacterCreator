@@ -24,7 +24,7 @@ person.GetInfo();
 
 Ancestry GetAncestry()
 {
-    AncestryType type = AncestryType.dwarf;
+    AncestryType type = AncestryType.Dwarf;
     for (bool InvalidOption = true; InvalidOption;  )
     {
 
