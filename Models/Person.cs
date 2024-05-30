@@ -16,7 +16,16 @@ class Person
         Console.WriteLine($"Сила: {_strength.Value} ({_strength.GetModifierString()}), Ловкость:{_dexterity.Value} ({_dexterity.GetModifierString()}), Телосложение: {_constitution.Value} ({_constitution.GetModifierString()}), Интеллект: {_intelligence.Value} ({_intelligence.GetModifierString()}), Мудрость: {_wisdom.Value} ({_wisdom.GetModifierString()}), Харизма: {_charisma.Value} ({_charisma.GetModifierString()})");
     }
     
-    public Person (string name, Ancestry ancestry, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+    public Person(
+        string name, 
+        Ancestry ancestry, 
+        int strength, 
+        int dexterity, 
+        int constitution, 
+        int intelligence, 
+        int wisdom, 
+        int charisma
+    )
     {
         if (name == "" || name == " ")
             _name = "без имени";
