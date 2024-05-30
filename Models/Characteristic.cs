@@ -5,15 +5,15 @@ class Characteristic
     {
         Value = value;
     }
-    public int GetModifierInt()
+    public int GetModifierNumber()
     {
         decimal modifierDecimal = Math.Floor((decimal)(Value - 10)/2);
         int modifier = Convert.ToInt32(modifierDecimal);
          return modifier;
     }
-    public string GetModifierString()
+    public string GetModifier()
     {
-        int modifier = GetModifierInt();
+        int modifier = GetModifierNumber();
         if (modifier > 0)
             return $"+{modifier}";
         else
