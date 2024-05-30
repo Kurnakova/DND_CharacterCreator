@@ -11,21 +11,21 @@ class Ancestry
 
     public Ancestry (AncestryType type)
     {
-        if (type == AncestryType.elf)
+        if (type == AncestryType.Elf)
         {
             Name = "Эльф";
             DexterityBonus = 2;
             WisdomBonus = 1;
             Size = CreatureSize.Medium;
         }
-        else if (type == AncestryType.dwarf)
+        else if (type == AncestryType.Dwarf)
         {
             Name = "Дварф";
             StrengthBonus = 1;
             ConstitutionBonus = 2;
             Size = CreatureSize.Medium;
         }
-        else if (type == AncestryType.gnome)
+        else if (type == AncestryType.Gnome)
         {
             Name = "Гном";
             DexterityBonus = 1;
