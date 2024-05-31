@@ -1,6 +1,6 @@
 using System.Dynamic;
 
-namespace DND_Modifications.Models
+namespace DND_CharacterCreator.Models
 {
     public class Ancestry
     {

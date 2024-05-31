@@ -1,4 +1,4 @@
-using DND_Modifications.Models;
+using DND_CharacterCreator.Models;
 
 Console.WriteLine("Введите в консоль данные о персонаже.");
 Console.Write("Имя: ");
