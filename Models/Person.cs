@@ -32,7 +32,6 @@ namespace DND_Modifications.Models
             _wisdom = new Characteristic (wisdom + ancestry.Wisdom);
             _charisma = new Characteristic (charisma + ancestry.Charisma);
         }
-        //Методы
         public string GetInfo()
         {
             string info = $"Имя: {_name}, Происхождение: {_ancestry.Name} \n";
