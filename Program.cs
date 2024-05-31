@@ -1,3 +1,5 @@
+using DND_Modifications.Models;
+
 Console.WriteLine("Введите в консоль данные о персонаже.");
 Console.Write("Имя: ");
 string name = CreateName();
