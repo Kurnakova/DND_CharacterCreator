@@ -7,7 +7,7 @@ namespace DND_Modifications.Models
         {
             Value = value;
         }
-        public int GetModifierNumber()
+        public int CountModifierNumber()
         {
             decimal modifierDecimal = Math.Floor((decimal)(Value - 10)/2);
             int modifier = Convert.ToInt32(modifierDecimal);
@@ -15,7 +15,7 @@ namespace DND_Modifications.Models
         }
         public string GetModifier()
         {
-            int modifier = GetModifierNumber();
+            int modifier = CountModifierNumber();
             if (modifier > 0)
                 return $"+{modifier}";
             else

@@ -32,7 +32,7 @@ namespace DND_Modifications.Models
             _wisdom = new Characteristic (wisdom + ancestry.Wisdom);
             _charisma = new Characteristic (charisma + ancestry.Charisma);
         }
-        public string GetInfo()
+        public string PrintInfo()
         {
             string info = $"Имя: {_name}, Раса: {_ancestry.Name} \n";
             info += $"Сила: {_strength.Value} ({_strength.GetModifier()}), ";

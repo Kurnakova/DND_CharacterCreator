@@ -21,7 +21,7 @@ Console.WriteLine(Ancestry.ListAllAncestries());
 Ancestry ancestry = CreateAncestry(); 
 
 Person person = new (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
-Console.WriteLine(person.GetInfo());
+Console.WriteLine(person.PrintInfo());
 
 string CreateName()
 {
