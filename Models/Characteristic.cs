@@ -7,15 +7,15 @@ namespace DND_Modifications.Models
         {
             Value = value;
         }
-        public int CountModifierNumber()
+        public int CalcModifier()
         {
             decimal modifierDecimal = Math.Floor((decimal)(Value - 10)/2);
             int modifier = Convert.ToInt32(modifierDecimal);
             return modifier;
         }
-        public string GetModifier()
+        public string PrintModifier()
         {
-            int modifier = CountModifierNumber();
+            int modifier = CalcModifier();
             if (modifier > 0)
                 return $"+{modifier}";
             else
