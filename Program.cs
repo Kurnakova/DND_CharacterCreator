@@ -18,7 +18,7 @@ Console.WriteLine("Выберите расу (введите её номер в 
 Ancestry ancestry = GetAncestry(); 
 
 Person person = new Person (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
-person.GetInfo();
+Console.WriteLine(person.GetInfo());
 
 // Методы
 string CreateName()

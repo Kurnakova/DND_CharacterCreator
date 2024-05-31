@@ -31,10 +31,16 @@ class Person
         _charisma = new Characteristic (charisma + ancestry.Charisma);
     }
     //Методы
-    public void GetInfo()
+    public string GetInfo()
     {
-        Console.WriteLine($"Имя: {_name}, Происхождение: {_ancestry.Name}");
-        Console.WriteLine($"Сила: {_strength.Value} ({_strength.GetModifier()}), Ловкость:{_dexterity.Value} ({_dexterity.GetModifier()}), Телосложение: {_constitution.Value} ({_constitution.GetModifier()}), Интеллект: {_intelligence.Value} ({_intelligence.GetModifier()}), Мудрость: {_wisdom.Value} ({_wisdom.GetModifier()}), Харизма: {_charisma.Value} ({_charisma.GetModifier()})");
+        string info = $"Имя: {_name}, Происхождение: {_ancestry.Name} \n";
+        info += $"Сила: {_strength.Value} ({_strength.GetModifier()}), ";
+        info += $"Ловкость:{_dexterity.Value} ({_dexterity.GetModifier()}), ";
+        info += $"Телосложение: {_constitution.Value} ({_constitution.GetModifier()}), ";
+        info += $"Интеллект: {_intelligence.Value} ({_intelligence.GetModifier()}), ";
+        info += $"Мудрость: {_wisdom.Value} ({_wisdom.GetModifier()}), ";
+        info += $"Харизма: {_charisma.Value} ({_charisma.GetModifier()})";
+        return info;
     }
 
 }
