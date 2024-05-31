@@ -21,9 +21,6 @@ class Person
         int charisma
     )
     {
-        if (name == "" || name == " ")
-            _name = "без имени";
-        else
             _name = name;
         _ancestry = ancestry;
         _strength = new Characteristic (strength + ancestry.Strength);
