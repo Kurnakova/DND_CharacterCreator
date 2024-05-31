@@ -1,3 +1,5 @@
+using System.Dynamic;
+
 class Ancestry
 {
     public string Name { get; }
@@ -32,5 +34,12 @@ class Ancestry
             Intelligence = 2;
             Size = CreatureSize.Small;
         }
+    }
+    public static string ListAllAncestries()
+    {
+        string info = "1. Эльф (+2 к ловкости, +1 к мудрости)\n";
+        info += "2. Дварф (+2 к телосложению, +1 к силе)\n";
+        info += "3. Гном (+2 к интеллекту, +1 к ловкости)";
+        return info;
     }
 }

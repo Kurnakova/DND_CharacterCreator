@@ -14,10 +14,11 @@ Console.Write("Мудрость: ");
 int wisdom = CreateCharacteristic();
 Console.Write("Харизма: ");
 int charisma = CreateCharacteristic();
-Console.WriteLine("Выберите расу (введите её номер в консоль): \n1. Эльф (+2 к ловкости, +1 к мудрости) \n2. Дварф (+2 к телосложению, +1 к силе) \n3. Гном (+2 к интеллекту, +1 к ловкости)");
+Console.WriteLine("Выберите расу (введите её номер в консоль):");
+Console.WriteLine(Ancestry.ListAllAncestries());
 Ancestry ancestry = CreateAncestry(); 
 
-Person person = new Person (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
+Person person = new (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
 Console.WriteLine(person.GetInfo());
 
 // Методы
