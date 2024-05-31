@@ -3,12 +3,12 @@ namespace DND_CharacterCreator.Models
     public class Person
     {
         private readonly string? _name;
-        private readonly Characteristic _strength = new(0);
-        private readonly Characteristic _dexterity = new(0);
-        private readonly Characteristic _constitution = new(0);
-        private readonly Characteristic _intelligence = new(0);
-        private readonly Characteristic _wisdom = new(0);
-        private readonly Characteristic _charisma = new(0);
+        private readonly Characteristic _strength;
+        private readonly Characteristic _dexterity;
+        private readonly Characteristic _constitution;
+        private readonly Characteristic _intelligence;
+        private readonly Characteristic _wisdom;
+        private readonly Characteristic _charisma;
 
         private readonly Ancestry _ancestry;
         
@@ -23,7 +23,7 @@ namespace DND_CharacterCreator.Models
             int charisma
         )
         {
-                _name = name;
+            _name = name;
             _ancestry = ancestry;
             _strength = new Characteristic (strength + ancestry.Strength);
             _dexterity = new Characteristic (dexterity + ancestry.Dexterity);
@@ -35,12 +35,12 @@ namespace DND_CharacterCreator.Models
         public string PrintInfo()
         {
             string info = $"Имя: {_name}, Раса: {_ancestry.Name} \n";
-            info += $"Сила: {_strength.Value} ({_strength.GetModifier()}), ";
-            info += $"Ловкость: {_dexterity.Value} ({_dexterity.GetModifier()}), ";
-            info += $"Телосложение: {_constitution.Value} ({_constitution.GetModifier()}), ";
-            info += $"Интеллект: {_intelligence.Value} ({_intelligence.GetModifier()}), ";
-            info += $"Мудрость: {_wisdom.Value} ({_wisdom.GetModifier()}), ";
-            info += $"Харизма: {_charisma.Value} ({_charisma.GetModifier()})";
+            info += $"Сила: {_strength.Value} ({_strength.CalcModifier()}), ";
+            info += $"Ловкость: {_dexterity.Value} ({_dexterity.CalcModifier()}), ";
+            info += $"Телосложение: {_constitution.Value} ({_constitution.CalcModifier()}), ";
+            info += $"Интеллект: {_intelligence.Value} ({_intelligence.CalcModifier()}), ";
+            info += $"Мудрость: {_wisdom.Value} ({_wisdom.CalcModifier()}), ";
+            info += $"Харизма: {_charisma.Value} ({_charisma.CalcModifier()})";
             return info;
         }
     }
