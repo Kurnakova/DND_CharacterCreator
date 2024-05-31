@@ -1,12 +1,12 @@
 class Person
 {
     private readonly string? _name;
-    private readonly Characteristic _strength = new Characteristic(0);
-    private readonly Characteristic _dexterity = new Characteristic(0);
-    private readonly Characteristic _constitution = new Characteristic(0);
-    private readonly Characteristic _intelligence = new Characteristic(0);
-    private readonly Characteristic _wisdom = new Characteristic(0);
-    private readonly Characteristic _charisma = new Characteristic(0);
+    private readonly Characteristic _strength = new(0);
+    private readonly Characteristic _dexterity = new(0);
+    private readonly Characteristic _constitution = new(0);
+    private readonly Characteristic _intelligence = new(0);
+    private readonly Characteristic _wisdom = new(0);
+    private readonly Characteristic _charisma = new(0);
 
     private readonly Ancestry _ancestry;
     
