@@ -34,9 +34,9 @@ namespace DND_Modifications.Models
         }
         public string GetInfo()
         {
-            string info = $"Имя: {_name}, Происхождение: {_ancestry.Name} \n";
+            string info = $"Имя: {_name}, Раса: {_ancestry.Name} \n";
             info += $"Сила: {_strength.Value} ({_strength.GetModifier()}), ";
-            info += $"Ловкость:{_dexterity.Value} ({_dexterity.GetModifier()}), ";
+            info += $"Ловкость: {_dexterity.Value} ({_dexterity.GetModifier()}), ";
             info += $"Телосложение: {_constitution.Value} ({_constitution.GetModifier()}), ";
             info += $"Интеллект: {_intelligence.Value} ({_intelligence.GetModifier()}), ";
             info += $"Мудрость: {_wisdom.Value} ({_wisdom.GetModifier()}), ";

@@ -30,9 +30,7 @@ string CreateName()
     {
         name = Console.ReadLine();
         if(string.IsNullOrWhiteSpace(name))
-        {
-            Console.WriteLine("Имя должно содержать символы. \nВведите новое имя:");
-        }
+            Console.Write("Имя должно содержать символы. \nВведите новое имя: ");
         else
             break;
     }
@@ -49,12 +47,12 @@ int CreateCharacteristic()
                     if(number >= 1 && number <= 20)
                         break;
                     else
-                        Console.WriteLine("Значение должно быть в диапазоне от 1 до 20. \nВведите новое значение:");
+                        Console.Write("Значение должно быть в диапазоне от 1 до 20. \nВведите новое значение: ");
 
                 }
             else
             {
-                Console.WriteLine("Значение характеристики должно быть числом. \nВведите новое значение:");
+                Console.Write("Значение характеристики должно быть числом. \nВведите новое значение: ");
             }
         }
         return number;
