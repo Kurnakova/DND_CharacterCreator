@@ -1,6 +1,6 @@
 class Ancestry
 {
-    public string? Name { get; }
+    public string Name { get; }
     public int Strength { get; }
     public int Dexterity { get; }
     public int Constitution { get; }
