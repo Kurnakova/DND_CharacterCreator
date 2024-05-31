@@ -15,7 +15,7 @@ int wisdom = CreateCharacteristic();
 Console.Write("Харизма: ");
 int charisma = CreateCharacteristic();
 Console.WriteLine("Выберите расу (введите её номер в консоль): \n1. Эльф (+2 к ловкости, +1 к мудрости) \n2. Дварф (+2 к телосложению, +1 к силе) \n3. Гном (+2 к интеллекту, +1 к ловкости)");
-Ancestry ancestry = GetAncestry(); 
+Ancestry ancestry = CreateAncestry(); 
 
 Person person = new Person (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
 Console.WriteLine(person.GetInfo());
@@ -57,12 +57,12 @@ int CreateCharacteristic()
         }
         return number;
     }
-Ancestry GetAncestry()
+Ancestry CreateAncestry()
 {
     AncestryType type = AncestryType.Dwarf;
-    for (bool InvalidOption = true; InvalidOption;  )
+    bool InvalidOption = true;
+    while (InvalidOption)
     {
-
        int ancestryOption = Convert.ToInt32(Console.ReadLine());
        type = (AncestryType)ancestryOption;
        InvalidOption = ancestryOption < 1 || ancestryOption > 3;
