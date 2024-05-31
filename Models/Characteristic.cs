@@ -1,6 +1,6 @@
 namespace DND_Modifications.Models
 {
-    class Characteristic
+    public class Characteristic
     {
         public int Value { get; }
         public Characteristic(int value)

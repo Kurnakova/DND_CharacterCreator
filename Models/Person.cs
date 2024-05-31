@@ -1,6 +1,6 @@
 namespace DND_Modifications.Models
 {
-    class Person
+    public class Person
     {
         private readonly string? _name;
         private readonly Characteristic _strength = new(0);

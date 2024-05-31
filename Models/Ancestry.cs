@@ -2,7 +2,7 @@ using System.Dynamic;
 
 namespace DND_Modifications.Models
 {
-    class Ancestry
+    public class Ancestry
     {
         public string Name { get; }
         public int Strength { get; }
