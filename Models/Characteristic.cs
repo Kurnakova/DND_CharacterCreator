@@ -1,6 +1,6 @@
 class Characteristic
 {
-    public int Value { get; set; }
+    public int Value { get; }
     public Characteristic(int value)
     {
         Value = value;
