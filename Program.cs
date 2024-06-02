@@ -19,7 +19,7 @@ Console.Write("Харизма: ");
 int charisma = CreateCharacteristic();
 Console.WriteLine("Выберите расу (номер):");
 Console.WriteLine(new Ancestries().Print());
-Ancestry ancestry = CreateAncestry(); 
+Ancestry ancestry = CreateAncestry();
 
 Person person = new(name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
 Console.WriteLine(person.Print());
@@ -44,7 +44,7 @@ string CreateName()
 int CreateCharacteristic()
 {
     int number;
-    while(true)
+    while (true)
     {
         var input = Console.ReadLine();
         if (int.TryParse(input, out number))

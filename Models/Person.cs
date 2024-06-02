@@ -11,26 +11,26 @@ public class Person
     private readonly Characteristic _charisma;
 
     private readonly Ancestry _ancestry;
-    
+
     public Person(
-        string name, 
-        Ancestry ancestry, 
-        int strength, 
-        int dexterity, 
-        int constitution, 
-        int intelligence, 
-        int wisdom, 
+        string name,
+        Ancestry ancestry,
+        int strength,
+        int dexterity,
+        int constitution,
+        int intelligence,
+        int wisdom,
         int charisma
     )
     {
         _name = name;
         _ancestry = ancestry;
-        _strength = new Characteristic (strength + ancestry.Strength);
-        _dexterity = new Characteristic (dexterity + ancestry.Dexterity);
-        _constitution = new Characteristic (constitution + ancestry.Constitution);
-        _intelligence = new Characteristic (intelligence + ancestry.Intelligence);
-        _wisdom = new Characteristic (wisdom + ancestry.Wisdom);
-        _charisma = new Characteristic (charisma + ancestry.Charisma);
+        _strength = new Characteristic(strength + ancestry.Strength);
+        _dexterity = new Characteristic(dexterity + ancestry.Dexterity);
+        _constitution = new Characteristic(constitution + ancestry.Constitution);
+        _intelligence = new Characteristic(intelligence + ancestry.Intelligence);
+        _wisdom = new Characteristic(wisdom + ancestry.Wisdom);
+        _charisma = new Characteristic(charisma + ancestry.Charisma);
     }
     public string Print()
     {
