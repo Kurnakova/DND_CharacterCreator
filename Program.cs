@@ -69,13 +69,13 @@ int CreateCharacteristic()
 Ancestry CreateAncestry()
 {
     AncestryType type = AncestryType.Dwarf;
-    bool InvalidOption = true;
-    while (InvalidOption)
+    bool invalidOption = true;
+    while (invalidOption)
     {
         int ancestryOption = Convert.ToInt32(Console.ReadLine());
         type = (AncestryType)ancestryOption;
-        InvalidOption = ancestryOption < 1 || ancestryOption > 3;
-        if (InvalidOption)
+        invalidOption = ancestryOption < 1 || ancestryOption > 3;
+        if (invalidOption)
         {
             Console.WriteLine("Неверное число. Введите число из списка.");
         }
