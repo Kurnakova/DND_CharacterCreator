@@ -1,3 +1,4 @@
+using DND_CharacterCreator.Constants;
 using DND_CharacterCreator.Enums;
 
 namespace DND_CharacterCreator.Models;
@@ -17,23 +18,23 @@ public class Ancestry
     {
         if (type == AncestryType.Elf)
         {
-            Name = "Эльф";
-            Dexterity = 2;
-            Wisdom = 1;
+            Name = AncestryConstant.ElfName;
+            Dexterity = AncestryConstant.ElfDexterity;
+            Wisdom = AncestryConstant.ElfWisdom;
             Size = CreatureSize.Medium;
         }
         else if (type == AncestryType.Dwarf)
         {
-            Name = "Дварф";
-            Strength = 1;
-            Constitution = 2;
+            Name = AncestryConstant.DwarfName;
+            Strength = AncestryConstant.DwarfStrength;
+            Constitution = AncestryConstant.DwarfConstitution;
             Size = CreatureSize.Medium;
         }
         else if (type == AncestryType.Gnome)
         {
-            Name = "Гном";
-            Dexterity = 1;
-            Intelligence = 2;
+            Name = AncestryConstant.GnomeName;
+            Dexterity = AncestryConstant.GnomeDexterity;
+            Intelligence = AncestryConstant.GnomeIntelligence;
             Size = CreatureSize.Small;
         }
         else
@@ -43,9 +44,9 @@ public class Ancestry
     }
     public static string ListAllAncestries()
     {
-        string info = "1. Эльф (+2 к ловкости, +1 к мудрости)\n";
-        info += "2. Дварф (+2 к телосложению, +1 к силе)\n";
-        info += "3. Гном (+2 к интеллекту, +1 к ловкости)";
+        string info = $"1. {AncestryConstant.ElfName} (+{AncestryConstant.ElfDexterity} к ловкости, +{AncestryConstant.ElfWisdom} к мудрости)\n";
+        info += $"2. {AncestryConstant.DwarfName} (+{AncestryConstant.DwarfConstitution} к телосложению, +{AncestryConstant.DwarfStrength} к силе)\n";
+        info += $"3. {AncestryConstant.GnomeName} (+{AncestryConstant.GnomeIntelligence} к интеллекту, +{AncestryConstant.GnomeDexterity} к ловкости)";
         return info;
     }
 }
