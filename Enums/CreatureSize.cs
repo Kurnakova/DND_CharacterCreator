@@ -1,3 +1,5 @@
+namespace DND_CharacterCreator.Enums;
+
 public enum CreatureSize
 {
     Tiny,
@@ -5,5 +7,5 @@ public enum CreatureSize
     Medium,
     Large,
     Huge,
-    Gargantuan
+    Gargantuan,
 }

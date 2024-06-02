@@ -1,3 +1,4 @@
+using DND_CharacterCreator.Enums;
 using DND_CharacterCreator.Models;
 
 Console.WriteLine("Введите в консоль данные о персонаже.");

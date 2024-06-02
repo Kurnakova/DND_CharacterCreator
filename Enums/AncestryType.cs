@@ -1,3 +1,5 @@
+namespace DND_CharacterCreator.Enums;
+
 public enum AncestryType
 {
     Elf = 1,
