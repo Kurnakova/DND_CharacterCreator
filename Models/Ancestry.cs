@@ -36,6 +36,10 @@ public class Ancestry
             Intelligence = 2;
             Size = CreatureSize.Small;
         }
+        else
+        {
+            throw new NotImplementedException();
+        }
     }
     public static string ListAllAncestries()
     {
