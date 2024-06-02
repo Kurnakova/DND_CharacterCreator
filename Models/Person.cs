@@ -32,7 +32,7 @@ public class Person
         _wisdom = new Characteristic (wisdom + ancestry.Wisdom);
         _charisma = new Characteristic (charisma + ancestry.Charisma);
     }
-    public string PrintInfo()
+    public string Print()
     {
         string info = $"Имя: {_name}, Раса: {_ancestry.Name} \n";
         info += $"Сила: {_strength.Value} ({_strength.PrintModifier()}), ";

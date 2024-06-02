@@ -22,7 +22,7 @@ Console.WriteLine(new Ancestries().Print());
 Ancestry ancestry = CreateAncestry(); 
 
 Person person = new (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
-Console.WriteLine(person.PrintInfo());
+Console.WriteLine(person.Print());
 
 string CreateName()
 {
