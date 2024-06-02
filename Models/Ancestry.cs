@@ -42,11 +42,4 @@ public class Ancestry
             throw new NotImplementedException();
         }
     }
-    public static string ListAllAncestries()
-    {
-        string info = $"1. {AncestryConstant.ElfName} (+{AncestryConstant.ElfDexterity} к ловкости, +{AncestryConstant.ElfWisdom} к мудрости)\n";
-        info += $"2. {AncestryConstant.DwarfName} (+{AncestryConstant.DwarfConstitution} к телосложению, +{AncestryConstant.DwarfStrength} к силе)\n";
-        info += $"3. {AncestryConstant.GnomeName} (+{AncestryConstant.GnomeIntelligence} к интеллекту, +{AncestryConstant.GnomeDexterity} к ловкости)";
-        return info;
-    }
 }

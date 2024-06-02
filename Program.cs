@@ -18,7 +18,7 @@ int wisdom = CreateCharacteristic();
 Console.Write("Харизма: ");
 int charisma = CreateCharacteristic();
 Console.WriteLine("Выберите расу (введите её номер в консоль):");
-Console.WriteLine(Ancestry.ListAllAncestries());
+Console.WriteLine(new Ancestries().Print());
 Ancestry ancestry = CreateAncestry(); 
 
 Person person = new (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
