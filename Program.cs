@@ -1,10 +1,11 @@
+using DND_CharacterCreator.Constants;
 using DND_CharacterCreator.Enums;
 using DND_CharacterCreator.Models;
 
 Console.WriteLine("Введите данные о персонаже.");
 Console.Write("Имя: ");
 string name = CreateName();
-Console.WriteLine("Введите значения характеристик (в диапазоне от 1 до 20).");
+Console.WriteLine($"Введите значения характеристик (в диапазоне от {CharacteristicConstant.MinLimit} до {CharacteristicConstant.MaxLimit}).");
 Console.Write("Сила: ");
 int strength = CreateCharacteristic();
 Console.Write("Ловкость: ");
@@ -49,13 +50,13 @@ int CreateCharacteristic()
         var input = Console.ReadLine();
         if (int.TryParse(input, out number))
         {
-            if (number >= 1 && number <= 20)
+            if (number >= CharacteristicConstant.MinLimit && number <= CharacteristicConstant.MaxLimit)
             {
                 break;
             }
             else
             {
-                Console.Write("Значение должно быть в диапазоне от 1 до 20. \nЗначение: ");
+                Console.Write($"Значение должно быть в диапазоне от {CharacteristicConstant.MinLimit} до {CharacteristicConstant.MaxLimit}. \nЗначение: ");
             }
 
         }
