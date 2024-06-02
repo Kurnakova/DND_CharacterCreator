@@ -9,8 +9,8 @@ public class Characteristic
     }
     public int CalcModifier()
     {
-        decimal modifierDecimal = Math.Floor((decimal)(Value - 10)/2);
-        int modifier = Convert.ToInt32(modifierDecimal);
+        decimal preModifier = Math.Floor((decimal)(Value - 10) / 2);
+        int modifier = Convert.ToInt32(preModifier);
         return modifier;
     }
     public string PrintModifier()
