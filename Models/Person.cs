@@ -35,12 +35,12 @@ public class Person
     public string PrintInfo()
     {
         string info = $"Имя: {_name}, Раса: {_ancestry.Name} \n";
-        info += $"Сила: {_strength.Value} ({_strength.CalcModifier()}), ";
-        info += $"Ловкость: {_dexterity.Value} ({_dexterity.CalcModifier()}), ";
-        info += $"Телосложение: {_constitution.Value} ({_constitution.CalcModifier()}), ";
-        info += $"Интеллект: {_intelligence.Value} ({_intelligence.CalcModifier()}), ";
-        info += $"Мудрость: {_wisdom.Value} ({_wisdom.CalcModifier()}), ";
-        info += $"Харизма: {_charisma.Value} ({_charisma.CalcModifier()})";
+        info += $"Сила: {_strength.Value} ({_strength.PrintModifier()}), ";
+        info += $"Ловкость: {_dexterity.Value} ({_dexterity.PrintModifier()}), ";
+        info += $"Телосложение: {_constitution.Value} ({_constitution.PrintModifier()}), ";
+        info += $"Интеллект: {_intelligence.Value} ({_intelligence.PrintModifier()}), ";
+        info += $"Мудрость: {_wisdom.Value} ({_wisdom.PrintModifier()}), ";
+        info += $"Харизма: {_charisma.Value} ({_charisma.PrintModifier()})";
         return info;
     }
 }
