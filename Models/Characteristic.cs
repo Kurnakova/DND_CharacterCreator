@@ -16,9 +16,6 @@ public class Characteristic
     public string PrintModifier()
     {
         int modifier = CalcModifier();
-        if (modifier > 0)
-            return $"+{modifier}";
-        else
-            return $"{modifier}";
+        return modifier > 0 ? $"+{modifier}" : $"{modifier}";
     }
 }
