@@ -1,9 +1,11 @@
+using DND_CharacterCreator.Constants;
+using DND_CharacterCreator.Enums;
 using DND_CharacterCreator.Models;
 
-Console.WriteLine("Введите в консоль данные о персонаже.");
+Console.WriteLine("Введите данные о персонаже.");
 Console.Write("Имя: ");
 string name = CreateName();
-Console.WriteLine("Введите значения характеристик.");
+Console.WriteLine($"Введите значения характеристик (в диапазоне от {CharacteristicConstant.MinLimit} до {CharacteristicConstant.MaxLimit}).");
 Console.Write("Сила: ");
 int strength = CreateCharacteristic();
 Console.Write("Ловкость: ");
@@ -16,12 +18,12 @@ Console.Write("Мудрость: ");
 int wisdom = CreateCharacteristic();
 Console.Write("Харизма: ");
 int charisma = CreateCharacteristic();
-Console.WriteLine("Выберите расу (введите её номер в консоль):");
-Console.WriteLine(Ancestry.ListAllAncestries());
-Ancestry ancestry = CreateAncestry(); 
+Console.WriteLine("Выберите расу (номер):");
+Console.WriteLine(new Ancestries().Print());
+Ancestry ancestry = CreateAncestry();
 
-Person person = new (name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
-Console.WriteLine(person.PrintInfo());
+Person person = new(name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
+Console.WriteLine(person.Print());
 
 string CreateName()
 {
@@ -29,45 +31,55 @@ string CreateName()
     while (true)
     {
         name = Console.ReadLine();
-        if(string.IsNullOrWhiteSpace(name))
-            Console.Write("Имя должно содержать символы. \nВведите новое имя: ");
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            Console.Write("Имя должно содержать символы. \nИмя: ");
+        }
         else
+        {
             break;
+        }
     }
     return name;
 }
 int CreateCharacteristic()
+{
+    int number;
+    while (true)
     {
-        int number;
-        while(true)
+        var input = Console.ReadLine();
+        if (int.TryParse(input, out number))
         {
-            var input = Console.ReadLine();
-            if (int.TryParse(input, out number))
-                {
-                    if(number >= 1 && number <= 20)
-                        break;
-                    else
-                        Console.Write("Значение должно быть в диапазоне от 1 до 20. \nВведите новое значение: ");
-
-                }
+            if (number >= CharacteristicConstant.MinLimit && number <= CharacteristicConstant.MaxLimit)
+            {
+                break;
+            }
             else
             {
-                Console.Write("Значение характеристики должно быть числом. \nВведите новое значение: ");
+                Console.Write($"Значение должно быть в диапазоне от {CharacteristicConstant.MinLimit} до {CharacteristicConstant.MaxLimit}. \nЗначение: ");
             }
+
         }
-        return number;
+        else
+        {
+            Console.Write("Значение характеристики должно быть числом. \nЗначение: ");
+        }
     }
+    return number;
+}
 Ancestry CreateAncestry()
 {
     AncestryType type = AncestryType.Dwarf;
-    bool InvalidOption = true;
-    while (InvalidOption)
+    bool invalidOption = true;
+    while (invalidOption)
     {
-       int ancestryOption = Convert.ToInt32(Console.ReadLine());
-       type = (AncestryType)ancestryOption;
-       InvalidOption = ancestryOption < 1 || ancestryOption > 3;
-       if (InvalidOption)
+        int ancestryOption = Convert.ToInt32(Console.ReadLine());
+        type = (AncestryType)ancestryOption;
+        invalidOption = ancestryOption < 1 || ancestryOption > 3;
+        if (invalidOption)
+        {
             Console.WriteLine("Неверное число. Введите число из списка.");
+        }
     }
     return new Ancestry(type);
 }
