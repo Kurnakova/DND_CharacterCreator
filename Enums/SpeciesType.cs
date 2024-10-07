@@ -1,6 +1,6 @@
 namespace DND_CharacterCreator.Enums;
 
-public enum AncestryType
+public enum SpeciesType
 {
     Elf = 1,
     Dwarf = 2,

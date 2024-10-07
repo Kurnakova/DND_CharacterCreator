@@ -10,11 +10,11 @@ public class Person
     private readonly Characteristic _wisdom;
     private readonly Characteristic _charisma;
 
-    private readonly Ancestry _ancestry;
+    private readonly Species _species;
 
     public Person(
         string name,
-        Ancestry ancestry,
+        Species ancestry,
         int strength,
         int dexterity,
         int constitution,
@@ -24,7 +24,7 @@ public class Person
     )
     {
         _name = name;
-        _ancestry = ancestry;
+        _species = ancestry;
         _strength = new Characteristic(strength + ancestry.Strength);
         _dexterity = new Characteristic(dexterity + ancestry.Dexterity);
         _constitution = new Characteristic(constitution + ancestry.Constitution);
@@ -34,7 +34,7 @@ public class Person
     }
     public string Print()
     {
-        string info = $"Имя: {_name}, Раса: {_ancestry.Name} \n";
+        string info = $"Имя: {_name}, Раса: {_species.Name} \n";
         info += $"Сила: {_strength.Value} ({_strength.PrintModifier()}), ";
         info += $"Ловкость: {_dexterity.Value} ({_dexterity.PrintModifier()}), ";
         info += $"Телосложение: {_constitution.Value} ({_constitution.PrintModifier()}), ";

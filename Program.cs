@@ -19,8 +19,8 @@ int wisdom = CreateCharacteristic();
 Console.Write("Харизма: ");
 int charisma = CreateCharacteristic();
 Console.WriteLine("Выберите расу (номер):");
-Console.WriteLine(new Ancestries().Print());
-Ancestry ancestry = CreateAncestry();
+Console.WriteLine(new AllSpecies().Print());
+Species ancestry = CreateAncestry();
 
 Person person = new(name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
 Console.WriteLine(person.Print());
@@ -67,19 +67,19 @@ int CreateCharacteristic()
     }
     return number;
 }
-Ancestry CreateAncestry()
+Species CreateAncestry()
 {
-    AncestryType type = AncestryType.Dwarf;
+    SpeciesType type = SpeciesType.Dwarf;
     bool invalidOption = true;
     while (invalidOption)
     {
         int ancestryOption = Convert.ToInt32(Console.ReadLine());
-        type = (AncestryType)ancestryOption;
+        type = (SpeciesType)ancestryOption;
         invalidOption = ancestryOption < 1 || ancestryOption > 3;
         if (invalidOption)
         {
             Console.WriteLine("Неверное число. Введите число из списка.");
         }
     }
-    return new Ancestry(type);
+    return new Species(type);
 }
