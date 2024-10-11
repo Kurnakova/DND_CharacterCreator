@@ -5,6 +5,7 @@ namespace DND_CharacterCreator.Models;
 
 public class Species 
 {
+    public SpeciesType Type { get; }
     public string Name { get; }
     public int Strength { get; }
     public int Dexterity { get; }
@@ -16,6 +17,7 @@ public class Species
 
     public Species(SpeciesType type)
     {
+        Type = type;
         if (type == SpeciesType.Elf)
         {
             Name = SpeciesConstant.ElfName;

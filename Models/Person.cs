@@ -11,10 +11,12 @@ public class Person
     private readonly Characteristic _charisma;
 
     private readonly Species _species;
+    private readonly SubSpecies _subSpecies;
 
     public Person(
         string name,
-        Species ancestry,
+        Species species,
+        SubSpecies subSpecies,
         int strength,
         int dexterity,
         int constitution,
@@ -24,13 +26,14 @@ public class Person
     )
     {
         _name = name;
-        _species = ancestry;
-        _strength = new Characteristic(strength + ancestry.Strength);
-        _dexterity = new Characteristic(dexterity + ancestry.Dexterity);
-        _constitution = new Characteristic(constitution + ancestry.Constitution);
-        _intelligence = new Characteristic(intelligence + ancestry.Intelligence);
-        _wisdom = new Characteristic(wisdom + ancestry.Wisdom);
-        _charisma = new Characteristic(charisma + ancestry.Charisma);
+        _species = species;
+        _subSpecies = subSpecies;
+        _strength = new Characteristic(strength + species.Strength + _subSpecies.Strength);
+        _dexterity = new Characteristic(dexterity + species.Dexterity + _subSpecies.Dexterity);
+        _constitution = new Characteristic(constitution + species.Constitution + _subSpecies.Constitution);
+        _intelligence = new Characteristic(intelligence + species.Intelligence + _subSpecies.Wisdom);
+        _wisdom = new Characteristic(wisdom + species.Wisdom + _subSpecies.Intelligence);
+        _charisma = new Characteristic(charisma + species.Charisma + _subSpecies.Charisma);
     }
     public string Print()
     {

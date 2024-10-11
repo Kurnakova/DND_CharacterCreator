@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using DND_CharacterCreator.Constants;
 using DND_CharacterCreator.Enums;
 using DND_CharacterCreator.Models;
@@ -20,9 +21,10 @@ Console.Write("Харизма: ");
 int charisma = CreateCharacteristic();
 Console.WriteLine("Выберите расу (номер):");
 Console.WriteLine(new AllSpecies().Print());
-Species ancestry = CreateAncestry();
+Species species = CreateSpecies();
+SubSpecies subSpecies = CreateSubSpecies(species.Type);
 
-Person person = new(name, ancestry, strength, dexterity, constitution, intelligence, wisdom, charisma);
+Person person = new(name, species, subSpecies, strength, dexterity, constitution, intelligence, wisdom, charisma);
 Console.WriteLine(person.Print());
 
 string CreateName()
@@ -67,15 +69,15 @@ int CreateCharacteristic()
     }
     return number;
 }
-Species CreateAncestry()
+Species CreateSpecies()
 {
     SpeciesType type = SpeciesType.Dwarf;
     bool invalidOption = true;
     while (invalidOption)
     {
-        int ancestryOption = Convert.ToInt32(Console.ReadLine());
-        type = (SpeciesType)ancestryOption;
-        invalidOption = ancestryOption < 1 || ancestryOption > 3;
+        int speciesOption = Convert.ToInt32(Console.ReadLine());
+        type = (SpeciesType)speciesOption;
+        invalidOption = speciesOption < 1 || speciesOption > 3;
         if (invalidOption)
         {
             Console.WriteLine("Неверное число. Введите число из списка.");
@@ -83,3 +85,47 @@ Species CreateAncestry()
     }
     return new Species(type);
 }
+
+SubSpecies CreateSubSpecies(SpeciesType speciesType)
+{
+    SubSpeciesType subSpeciesType = SubSpeciesType.Drow;
+    Console.WriteLine("Выберете подрасу:");
+    if (speciesType == SpeciesType.Elf)
+    {
+        int numberOfSubSpecies = SpeciesConstant.ElfSubSpeciesNumber;
+        Console.WriteLine(new AllSubSpecies().PrintElves());
+        int subSpeciesOption = ChooseSubSpecies(numberOfSubSpecies);
+        subSpeciesType = (SubSpeciesType)(100 + subSpeciesOption);
+    }
+    else if (speciesType == SpeciesType.Dwarf)
+    {
+        int numberOfSubSpecies = SpeciesConstant.DwarfSubSpeciesNumber;
+        Console.WriteLine(new AllSubSpecies().PrintDwarves());
+        int subSpeciesOption = ChooseSubSpecies(numberOfSubSpecies);
+        subSpeciesType = (SubSpeciesType)(200 + subSpeciesOption);
+    }
+    else if (speciesType == SpeciesType.Gnome)
+    {
+        int numberOfSubSpecies = SpeciesConstant.GnomeSubSpeciesNumber;
+        Console.WriteLine(new AllSubSpecies().PrintGnomes());
+        int option = ChooseSubSpecies(numberOfSubSpecies);
+    }
+    return new SubSpecies(speciesType, subSpeciesType);
+}
+
+int ChooseSubSpecies(int numberOfSubSpecies)
+{
+    int speciesOption = 1;
+    bool invalidOption = true;
+    while (invalidOption)
+    {
+        speciesOption = Convert.ToInt32(Console.ReadLine());
+        invalidOption = speciesOption < 1 || speciesOption > numberOfSubSpecies;
+        if (invalidOption)
+        {
+            Console.WriteLine("Неверное число. Введите число из списка.");
+        }
+    }
+    return speciesOption;
+}
+
